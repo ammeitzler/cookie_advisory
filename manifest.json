@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "name": "Tough Cookie",
+    "description": "A Chrome Extension to redesign cookie policy popups.",
+    "version": "1.0",
+    "author": "Angeline Marie Michael Meitzler",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "icon/cookie.png",
+        "32": "icon/cookie.png",
+        "48": "icon/cookie.png",
+        "128": "icon/cookie.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["jquery-3.3.1.js","content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      "popup.js", "images/*.png","images/*.jpg", "images/*.jpeg"
+    ],
+    "icons": {                   
+        "19": "icon/cookie.png",
+        "38": "icon/cookie.png",
+        "48": "icon/cookie.png",
+        "128": "icon/cookie.png"  
+    },
+    "permissions": ["storage","activeTab","declarativeContent"],
+    "page_action": {
+      "default_title": "Tough Cookie",
+      "default_popup": "index.html"
+    }
+}

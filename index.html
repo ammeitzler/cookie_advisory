@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        width: 200px;
+        color: #000;
+        text-align: left;
+        padding: 20px;
+      }
+      input[type=checkbox] + label {
+        margin: 0.15em;
+        cursor: pointer;
+        display: inline-block;
+      }
+      input[type=checkbox] {
+        display: none;
+      }
+      input[type=checkbox] + label:before {
+        content: "X";
+        border: 0.1em solid #000;
+        display: inline-block;
+        width: 1em;
+        height: .9em;
+        padding-left: 0.35em;
+        padding-bottom: 0.3em;
+        margin-right: 0.2em;
+        vertical-align: bottom;
+        color: transparent;
+        transition: .2s;
+      }
+      input[type=checkbox] + label:active:before {
+        transform: scale(0);
+      }
+
+      input[type=checkbox]:checked + label:before {
+        background-color: black;
+        border-color: black;
+        color: #fff;
+      }
+
+      input[type=checkbox]:disabled + label:before {
+        transform: scale(1);
+        border-color: #aaa;
+      }
+      input[type=checkbox]:checked:disabled + label:before {
+        transform: scale(1);
+        background-color: #bfb;
+        border-color: #bfb;
+      }
+      h1 {
+          font-size: 4.2em;
+          margin: 0;
+          margin-bottom: 10px;
+      }
+      p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        display: inline;
+      }
+      button {
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          font-size: 1.2em;
+      }
+      img.cookie {
+        width: 120px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Tough Cookie</h1>
+    <img class="cookie" src="icon/cookie_stack.png">
+    <input type="checkbox" id="changeBlur" checked><label for="changeBlur"></label><p>redesign cookie policy popups</p>
+    <script src="changeimage.js"></script>
+  </body>
+</html>
